@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/book?userSSl=ture
+    username: root
+    password: 123456
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/
+    static-path-pattern: /static/**
+    pathmatch:
+      matching-strategy: ant_path_matcher
+mybatis-plus:
+  type-aliases-package: com.zhy.entity
+  mapper-locations: classpath:/mapper/*.xml
+logging:
+  level:
+    com.zhy.mapper: debug
